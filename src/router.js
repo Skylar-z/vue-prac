@@ -6,6 +6,8 @@ import Shop from './components/tabbar/ShopContainer.vue'
 import Search from './components/tabbar/SearchContainer.vue'
 
 
+
+
 Vue.use(Router)
 
 export default new Router({
