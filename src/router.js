@@ -4,6 +4,7 @@ import Home from './components/tabbar/HomeContainer.vue'
 import Member from './components/tabbar/MemberContainer.vue'
 import Shop from './components/tabbar/ShopContainer.vue'
 import Search from './components/tabbar/SearchContainer.vue'
+import news from './components/news/newsList.vue'
 
 
 
@@ -12,6 +13,9 @@ Vue.use(Router)
 
 export default new Router({
     routes: [{
+            path: '/',
+            redirect: Home
+        }, {
             path: '/home',
             component: Home
         },
@@ -25,6 +29,9 @@ export default new Router({
         }, {
             path: '/search',
             component: Search
+        }, {
+            path: '/home/news',
+            component: news
         }
     ],
     linkActiveClass: 'mui-active'

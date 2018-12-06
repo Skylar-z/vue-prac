@@ -1,8 +1,10 @@
 <template>
   <div id="app" class="app-container">
-   <mt-header fixed title="固定在顶部"></mt-header>
+   <mt-header fixed title="今日头部条"></mt-header>
 
-    <router-view></router-view>
+    <transition>
+			<router-view></router-view>
+		</transition>
 
 		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -36,5 +38,23 @@ export default{
 <style lang="scss" scoped>
 .app-container{
   padding-top:50px;
+	overflow-x: hidden;
+}
+.v-enter{
+	opacity: 0;
+	transform: translateX(100%)
+}
+.v-leave-to{
+	opacity: 0;
+	transform: translateX(-100%)
+}
+
+.v-enter-active,
+.v-leave-active{
+	position: absolute;
+	transition: all 0.4s linear;
+}
+.mui-grid-view.mui-grid-9 .mui-media .mui-icon{
+	font-size: 1.9rem;
 }
 </style>
