@@ -2,9 +2,11 @@
   <div id="app" class="app-container">
    <mt-header fixed title="今日头部条"></mt-header>
 
-    <transition>
+
+		<transition>
 			<router-view></router-view>
 		</transition>
+
 
 		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -28,8 +30,13 @@
 </template>
 
 <script>
+ 
 export default{
-
+methods:{
+	 log (iscroll) {
+      console.log(iscroll)
+}
+}
 }
 </script>
 
@@ -38,7 +45,7 @@ export default{
 <style lang="scss" scoped>
 .app-container{
   padding-top:50px;
-	overflow-x: hidden;
+//   overflow-x: hidden;
 }
 .v-enter{
 	opacity: 0;
@@ -56,5 +63,12 @@ export default{
 }
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{
 	font-size: 1.9rem;
+}
+
+*{
+	outline: 1px solid red;
+}
+.mui-bar{
+	z-index:900;
 }
 </style>

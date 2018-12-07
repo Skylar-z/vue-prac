@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import MintUI from 'mint-ui'
+import IScrollView from 'vue-iscroll-view';
+import IScroll from 'iscroll'
 import 'mint-ui/lib/style.css'
 import './lib/app.css'
 import './lib/mui.min.css'
@@ -12,11 +14,13 @@ import { Header, Swipe, SwipeItem } from 'mint-ui';
 import { Tabbar, TabItem } from 'mint-ui';
 
 
+
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 
 Vue.use(MintUI)
+Vue.use(IScrollView, IScroll)
 
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
