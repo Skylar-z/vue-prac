@@ -8,6 +8,7 @@ import 'mint-ui/lib/style.css'
 import './lib/app.css'
 import './lib/mui.min.css'
 import './lib/icons-extra.css'
+import moment from 'moment';
 
 
 import { Header, Swipe, SwipeItem } from 'mint-ui';
@@ -25,6 +26,9 @@ Vue.use(IScrollView, IScroll)
 Vue.component(Tabbar.name, Tabbar);
 Vue.component(TabItem.name, TabItem);
 
+Vue.filter('dataFontmate', function(value, pattern = "YYYY-MM-DD hh:mm") {
+    return moment(value).format(pattern)
+})
 
 
 Vue.config.productionTip = false

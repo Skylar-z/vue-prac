@@ -5,6 +5,7 @@ import Member from './components/tabbar/MemberContainer.vue'
 import Shop from './components/tabbar/ShopContainer.vue'
 import Search from './components/tabbar/SearchContainer.vue'
 import news from './components/news/newsList.vue'
+import newsInfo from './components/news/newsInfo.vue'
 
 
 
@@ -32,6 +33,10 @@ export default new Router({
         }, {
             path: '/home/news',
             component: news
+        }, {
+            path: '/home/newsInfo:index',
+            component: newsInfo,
+            props: true
         }
     ],
     linkActiveClass: 'mui-active'

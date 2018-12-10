@@ -20,7 +20,7 @@
 		                    <span class="mui-icon mui-icon-email"></span>
 		                    <div class="mui-media-body">图片分享</div></a></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-chatbubble"></span>
+		                    <span  class="mui-icon mui-icon-chatbubble"></span>
 		                    <div class="mui-media-body">商品购买</div></a></li>
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
 		                    <span class="mui-icon mui-icon-location"></span>
@@ -42,18 +42,6 @@
 		                    <div class="mui-media-body">联系我们</div></a></li>
 		        </ul> 
 		</div>
-
-    <!-- <div style="height:800px"></div>
-       <input type="text">
-        <input type="text">
-        <button @click="submit" style="padding-bottom:50px">提交</button>
-
-        <div class="BG" v-if="flag" @click="hidden()">
-            <div  class="BGWrapper">
-                <a href="https://www.baidu.com">wordddd</a>
-            </div>
-        </div> -->
-	 <!-- </iscroll-view> -->
      </div>
 </template>
 
