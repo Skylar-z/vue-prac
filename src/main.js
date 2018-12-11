@@ -11,15 +11,14 @@ import './lib/icons-extra.css'
 import moment from 'moment';
 
 
-import { Header, Swipe, SwipeItem } from 'mint-ui';
-import { Tabbar, TabItem } from 'mint-ui';
-
-
-
+import { Header, Swipe, SwipeItem, Button } from 'mint-ui';
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
+
+import { Tabbar, TabItem } from 'mint-ui';
 Vue.use(MintUI)
 Vue.use(IScrollView, IScroll)
 

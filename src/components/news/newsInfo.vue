@@ -7,12 +7,18 @@
     </p>
    
     <p>{{index}}</p>
+
+    <comment-box></comment-box>
+
 </div>    
 </template>
 <script>
+import comment from '../comment/comment.vue'
 export default {
     props:['index'],
-    
+    components:{
+        'comment-box':comment
+    }
 }
 </script>
 <style lang="scss" scoped>

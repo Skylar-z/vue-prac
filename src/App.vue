@@ -3,7 +3,7 @@
    <mt-header fixed title="今日头部条"></mt-header>
 
 
-		<transition>
+		<transition >
 			<router-view></router-view>
 		</transition>
 
@@ -44,7 +44,8 @@ methods:{
 
 <style lang="scss" scoped>
 .app-container{
-  padding-top:50px;
+  padding-top:40px;
+  padding-bottom:50px;
 //   overflow-x: hidden;
 }
 .v-enter{
