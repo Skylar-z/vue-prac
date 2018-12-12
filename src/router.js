@@ -6,6 +6,7 @@ import Shop from './components/tabbar/ShopContainer.vue'
 import Search from './components/tabbar/SearchContainer.vue'
 import news from './components/news/newsList.vue'
 import newsInfo from './components/news/newsInfo.vue'
+import photos from './components/photos/photos.vue'
 
 
 
@@ -37,6 +38,9 @@ export default new Router({
             path: '/home/newsInfo:index',
             component: newsInfo,
             props: true
+        }, {
+            path: '/home/photos',
+            component: photos
         }
     ],
     linkActiveClass: 'mui-active'

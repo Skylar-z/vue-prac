@@ -72,4 +72,7 @@ methods:{
 .mui-bar{
 	z-index:900;
 }
+.mint-header.is-fixed{
+	z-index: 999;
+}
 </style>
