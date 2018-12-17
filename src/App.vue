@@ -32,10 +32,8 @@
 <script>
  
 export default{
-methods:{
-	 log (iscroll) {
-      console.log(iscroll)
-}
+methods() {
+	
 }
 }
 </script>
