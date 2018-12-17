@@ -17,9 +17,9 @@
 		</div>
 
         <ul class="photo-list">
-            <li v-for="item in showpic" :key="item.id">
+            <router-link tag='li' v-for="item in showpic" :key="item.id" :to="'/home/photoInfo'+item.id">
                 <img v-lazy="item.src">
-            </li>
+            </router-link>
         </ul>
 
 

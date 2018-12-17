@@ -1,51 +1,48 @@
 <template>
-<div>
-    <!-- <iscroll-view  class="scroll-view"> -->
+    <div>
         <mt-swipe :auto="2000" >
             <mt-swipe-item>
                 <img src='./../../assets/1.jpg' alt="">
             </mt-swipe-item>
-        </mt-swipe>
-   
-
+        </mt-swipe>   
 		<div class="mui-content">
-		        <ul class="mui-table-view mui-grid-view mui-grid-9">
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                        <router-link to="/home/news">
-		                    <span class="mui-icon mui-icon-home"></span>
-		                    <div class="mui-media-body">新闻资讯</div>
-                        </router-link>
-                    </li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                        <router-link to="/home/photos">
-		                    <span class="mui-icon mui-icon-email"></span>
-		                    <div class="mui-media-body">图片分享</div>
-                        </router-link>
-                    </li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span  class="mui-icon mui-icon-chatbubble"></span>
-		                    <div class="mui-media-body">商品购买</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-location"></span>
-		                    <div class="mui-media-body">留言反馈</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-search"></span>
-		                    <div class="mui-media-body">视频专区</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-phone"></span>
-		                    <div class="mui-media-body">联系我们</div></a></li>
-                             <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-location"></span>
-		                    <div class="mui-media-body">留言反馈</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-search"></span>
-		                    <div class="mui-media-body">视频专区</div></a></li>
-		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-		                    <span class="mui-icon mui-icon-phone"></span>
-		                    <div class="mui-media-body">联系我们</div></a></li>
-		        </ul> 
+            <ul class="mui-table-view mui-grid-view mui-grid-9">
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                    <router-link to="/home/news">
+                        <span class="mui-icon mui-icon-home"></span>
+                        <div class="mui-media-body">新闻资讯</div>
+                    </router-link>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                    <router-link to="/home/photos">
+                        <span class="mui-icon mui-icon-email"></span>
+                        <div class="mui-media-body">图片分享</div>
+                    </router-link>
+                </li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span  class="mui-icon mui-icon-chatbubble"></span>
+                        <div class="mui-media-body">商品购买</div></a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-location"></span>
+                        <div class="mui-media-body">留言反馈</div></a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-search"></span>
+                        <div class="mui-media-body">视频专区</div></a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-phone"></span>
+                        <div class="mui-media-body">联系我们</div></a></li>
+                            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-location"></span>
+                        <div class="mui-media-body">留言反馈</div></a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-search"></span>
+                        <div class="mui-media-body">视频专区</div></a></li>
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
+                        <span class="mui-icon mui-icon-phone"></span>
+                        <div class="mui-media-body">联系我们</div></a></li>
+            </ul> 
 		</div>
-     </div>
+    </div>
 </template>
 
 <script>

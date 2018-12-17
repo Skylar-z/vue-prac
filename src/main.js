@@ -7,6 +7,7 @@ import './lib/app.css'
 import './lib/mui.min.css'
 import './lib/icons-extra.css'
 import moment from 'moment';
+// import VuePreview from 'vue2-preview'
 
 
 
@@ -20,6 +21,8 @@ import moment from 'moment';
 // Vue.component(TabItem.name, TabItem);
 // Vue.use(Lazyload);
 Vue.use(MintUI);
+
+// Vue.use(VuePreview)
 
 
 Vue.filter('dataFontmate', function(value, pattern = "YYYY-MM-DD hh:mm") {
