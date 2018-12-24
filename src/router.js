@@ -8,7 +8,8 @@ import news from './components/news/newsList.vue'
 import newsInfo from './components/news/newsInfo.vue'
 import photos from './components/photos/photos.vue'
 import photoInfo from './components/photos/photoInfo.vue'
-
+import goodsList from './components/goods/goodsList.vue'
+import goodsInfo from "./components/goods/goodsInfo.vue"
 
 
 Vue.use(Router)
@@ -46,6 +47,13 @@ export default new Router({
             props: true,
             component: photoInfo
 
+        }, {
+            path: "/home/goodslist",
+            component: goodsList
+        }, {
+            path: "/home/goodsInfo:id",
+            component: goodsInfo,
+            props: true
         }
     ],
     linkActiveClass: 'mui-active'

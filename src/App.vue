@@ -31,10 +31,10 @@
 
 <script>
  
-export default{
-methods() {
+export default {
+	methods :{
 	
-}
+	}
 }
 </script>
 
@@ -62,10 +62,6 @@ methods() {
 }
 .mui-grid-view.mui-grid-9 .mui-media .mui-icon{
 	font-size: 1.9rem;
-}
-
-*{
-	outline: 1px solid red;
 }
 .mui-bar{
 	z-index:900;
