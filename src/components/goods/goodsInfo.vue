@@ -1,8 +1,11 @@
 <template>
     <div class="goosInfo"> 
+        <swiper :picList= "goodslist" :isfull="false"></swiper>
+
         <div class="goodsInfo-card" v-for="item in showpic" :key="item.id">
             <img :src="item.src" alt="" >
         </div>
+
         <div class="goodsInfo-card">
             <div class="goodsInfo-card__header">
                 <div class="text-header">
@@ -15,11 +18,12 @@
                     销售价：￥1000
                 </div>
                 <div class="text-content">
-                    购买数量：- 1 +
+                    购买数量： <numberbox></numberbox>
                 </div>
               <div>
                     <div class="button-info">
                         立即购买
+                       
                     </div>
                     <div class="button-wram">
                         加入购物车
@@ -46,12 +50,18 @@
                     上架时间：2010-12-24
                 </div>
             </div>
+             <mt-button type="primary" size="large" plain @click="goDesc(picid)">查看详情</mt-button>
+             <mt-button type="danger"  size="large" @click="gocomment()">查看评论</mt-button>
+
         </div>
 
     </div>
 </template>
 
 <script>
+import swiper from "../subcomponents/swiper.vue"
+import numberbox from "../subcomponents/numbox.vue"
+
 export default {
     props:['id'],
     created(){
@@ -80,7 +90,14 @@ export default {
            
             return this.showpic = showpic;
             
+        },
+        goDesc(id){
+            this.$router.push({path:'goodsDesc'+id})
         }
+    },
+    components:{
+        swiper,
+        numberbox
     }
 }
 </script>

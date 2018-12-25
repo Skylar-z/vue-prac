@@ -10,6 +10,7 @@ import photos from './components/photos/photos.vue'
 import photoInfo from './components/photos/photoInfo.vue'
 import goodsList from './components/goods/goodsList.vue'
 import goodsInfo from "./components/goods/goodsInfo.vue"
+import goodsDesc from "./components/goods/goodsDesc.vue"
 
 
 Vue.use(Router)
@@ -53,6 +54,10 @@ export default new Router({
         }, {
             path: "/home/goodsInfo:id",
             component: goodsInfo,
+            props: true
+        }, {
+            path: "/home/goodsDesc:id",
+            component: goodsDesc,
             props: true
         }
     ],

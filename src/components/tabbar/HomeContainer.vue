@@ -1,8 +1,8 @@
 <template>
     <div>
-        <swiper-box :piclist="picList">
+        <swiper :picList="picList" :isfull=true>
 
-        </swiper-box>
+        </swiper>
 
 		<div class="mui-content">
             <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -66,7 +66,7 @@
 
 <script>
 
-import swiper from "../swiper/swiper.vue"
+import swiper from "../subcomponents/swiper.vue"
 
 export default {
     data(){
@@ -89,7 +89,7 @@ export default {
         
   },
   components:{
-      "swiper-box":swiper,
+      swiper
       
   }    
 }
