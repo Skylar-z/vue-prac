@@ -20,15 +20,15 @@
                 <div class="text-content">
                     购买数量： <numberbox></numberbox>
                 </div>
-              <div>
+                <div>
                     <div class="button-info">
                         立即购买
-                       
+                    
                     </div>
-                    <div class="button-wram">
+                    <div class="button-wram" @click="ballfall">
                         加入购物车
                     </div>
-              </div>
+                </div>
             </div>
         </div>
 
@@ -55,7 +55,11 @@
 
         </div>
 
+    <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter">
+        <div class="ball" v-show="ballflag" ref="ball"></div>
+    </transition>
     </div>
+   
 </template>
 
 <script>
@@ -77,7 +81,8 @@ export default {
             {id:4,src:'https://ww1.sinaimg.cn/bmiddle/005wh5Faly1fy332weihkj30rs0rsq44.jpg',price:100,oldprice:100},
             {id:5,src:'http://fuss10.elemecdn.com/b/18/0678e57cb1b226c04888e7f244c20jpeg.jpeg',price:100,oldprice:100}],
             showpic:[],
-            picid:this.id
+            picid:this.id,
+            ballflag:false
         }
        
     },
@@ -85,14 +90,31 @@ export default {
         getShowpic(picid){
             var showpic = this.goodslist.filter(item=>{
                 return item.id == picid;
-            })
-            console.log(showpic);
-           
+            })           
             return this.showpic = showpic;
             
         },
         goDesc(id){
             this.$router.push({path:'goodsDesc'+id})
+        },
+        ballfall(){
+            this.ballflag = !this.ballflag
+        },
+        beforeEnter(el){
+            el.style.transform = "translate(0,0)"
+        },
+        enter(el,done){
+            const ballPosition = this.$refs.ball.getBoundingClientRect();
+            const badgePosition = document.getElementById("badge").getBoundingClientRect();
+            console.log(badgePosition);
+            const xDist = badgePosition.left - ballPosition.left;
+            const yDist = badgePosition.top - ballPosition.top
+            el.style.transform = `translate(${xDist}px, ${yDist}px)`;
+            el.style.transition = "all .5s cubic-bezier(.02,.03,.42,.85)";
+            done();
+        },
+        afterEnter(el){
+             this.ballflag = !this.ballflag;
         }
     },
     components:{
@@ -157,5 +179,15 @@ export default {
         padding: 10px;
         box-sizing: border-box;
     }
+}
+.ball{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 536px;
+    left: 148px;
+    z-index: 999;
+    background-color: red;
+    border-radius: 50%;
 }
 </style>

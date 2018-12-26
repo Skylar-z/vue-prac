@@ -1,8 +1,8 @@
 <template>
 <div>
     <mt-swipe :auto="2000" >
-        <mt-swipe-item v-for="item in picList" :key="item.id" :class="{'full':isfull}">
-            <img :src="item.src" alt="">
+        <mt-swipe-item v-for="item in picList" :key="item.id" >
+            <img :src="item.src" alt="" :class="{'full':isfull}">
         </mt-swipe-item>
     </mt-swipe> 
 </div>    
@@ -25,10 +25,10 @@ export default {
 
 <style lang="scss">
 .mint-swipe{
+    width: 100%;
     height:200px !important;
-     text-align: center;
+    text-align: center;
     img{
-       
         height: 100%;
     }
 }
