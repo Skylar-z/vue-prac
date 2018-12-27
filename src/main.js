@@ -7,6 +7,7 @@ import './lib/app.css'
 import './lib/mui.min.css'
 import './lib/icons-extra.css'
 import moment from 'moment';
+import Vuex from "vuex";
 // import VuePreview from 'vue2-preview'
 
 
@@ -21,9 +22,15 @@ import moment from 'moment';
 // Vue.component(TabItem.name, TabItem);
 // Vue.use(Lazyload);
 Vue.use(MintUI);
-
+Vue.use(Vuex);
 // Vue.use(VuePreview)
 
+var store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {}
+})
 
 Vue.filter('dataFontmate', function(value, pattern = "YYYY-MM-DD hh:mm") {
     return moment(value).format(pattern)
@@ -34,5 +41,6 @@ Vue.config.productionTip = false
 
 new Vue({
     router,
-    render: h => h(App)
+    render: h => h(App),
+    store
 }).$mount('#app')

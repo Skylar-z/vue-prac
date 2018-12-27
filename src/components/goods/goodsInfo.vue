@@ -18,7 +18,7 @@
                     销售价：￥1000
                 </div>
                 <div class="text-content">
-                    购买数量： <numberbox></numberbox>
+                    购买数量： <numberbox @getNumber="getNumberer()"></numberbox>
                 </div>
                 <div>
                     <div class="button-info">
@@ -82,7 +82,8 @@ export default {
             {id:5,src:'http://fuss10.elemecdn.com/b/18/0678e57cb1b226c04888e7f244c20jpeg.jpeg',price:100,oldprice:100}],
             showpic:[],
             picid:this.id,
-            ballflag:false
+            ballflag:false,
+            selectNum:''
         }
        
     },
@@ -115,6 +116,9 @@ export default {
         },
         afterEnter(el){
              this.ballflag = !this.ballflag;
+        },
+        getNumberer(){
+            console.log("外组件拿到的值为"+spreadNum);
         }
     },
     components:{

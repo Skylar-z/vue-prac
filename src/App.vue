@@ -7,6 +7,7 @@
 			<router-view></router-view>
 		</transition>
 
+<input type="text">
 
 		<nav class="mui-bar mui-bar-tab">
 			<router-link class="mui-tab-item" to="/home">
@@ -36,6 +37,7 @@ export default {
 	
 	}
 }
+
 </script>
 
 
