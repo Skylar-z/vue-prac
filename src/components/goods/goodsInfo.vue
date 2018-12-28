@@ -18,7 +18,7 @@
                     销售价：￥1000
                 </div>
                 <div class="text-content">
-                    购买数量： <numberbox @getNumber="getNumberer()"></numberbox>
+                    购买数量： <numberbox @sendNumber="getNumber"></numberbox>
                 </div>
                 <div>
                     <div class="button-info">
@@ -117,8 +117,8 @@ export default {
         afterEnter(el){
              this.ballflag = !this.ballflag;
         },
-        getNumberer(){
-            console.log("外组件拿到的值为"+spreadNum);
+        getNumber(num){
+            console.log("外组件拿到的值为"+num);
         }
     },
     components:{
